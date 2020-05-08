@@ -1,42 +1,32 @@
 const leftBtn = document.querySelector("#leftBtn");
-const rightBtn = document.querySelector("#rightBtn");
-const img= document.querySelector("#img");
+const rightBtn = document.querySelector("#rightBtn");  
+const createImg = document.createElement('img');
+const divImg = document.querySelector(".imgWrap");
+let imgNum =1;
+divImg.appendChild(createImg);
+createImg.src = `image/${imgNum}.jpg`;
 
-rightBtn.addEventListener("click",rihgtImg);
+rightBtn.addEventListener("click",rightImg); 
 leftBtn.addEventListener("click",leftImg);
-
-function rihgtImg(){
-    if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/1.jpg"){
-        img.src="image/2.jpg";
+    
+function rightImg(){
+    if(imgNum === 5){
+        imgNum =1;
+        createImg.src = `image/${imgNum}.jpg`;
     }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/2.jpg"){
-        img.src ="image/3.jpg";
-    }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/3.jpg"){
-        img.src ="image/4.jpg";
-    }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/4.jpg"){
-        img.src ="image/5.jpg";
-    }
-    else{
-        img.src ="image/1.jpg";
+    else {  
+        imgNum +=1;
+        createImg.src = `image/${imgNum}.jpg`;
     }
 }
 
 function leftImg(){
-    if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/1.jpg"){
-        img.src="image/5.jpg";
+    if(imgNum === 1 ){
+        imgNum =5;
+        createImg.src = `image/${imgNum}.jpg`;
     }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/5.jpg"){
-        img.src ="image/4.jpg";
-    }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/4.jpg"){
-        img.src ="image/3.jpg";
-    }
-    else if(img.src === "file:///D:/GitHub/to-learn-js-ko/Carousel/image/3.jpg"){
-        img.src ="image/2.jpg";
-    }
-    else{
-        img.src ="image/1.jpg";
+    else {
+        imgNum -=1;
+        createImg.src = `image/${imgNum}.jpg`;
     }
 }
