@@ -1,11 +1,9 @@
 const clockContainter = document.querySelector(".clock-container");
 const clockText = clockContainter.querySelector("h3");
-const score = document.querySelector(".score");
-const totalScore = document.querySelector(".totalScore");
 
-
-let startTime = 10;
+let startTime = 30;
 let realScore = 10;
+
 const timer = () => {
     if (startTime > 0){
         startTime -=1;
@@ -13,9 +11,8 @@ const timer = () => {
     }     
     else {
         clearInterval(setTime);
-        alert("1점 차감됩니다.");
-        realScore -=1 ;
-        score.innerText = `점수 : ${realScore}점`; //여기 종료 후 다시 타임 리셋 시켜야 함 
+        alert("시간 초과!! 다음 문제로 이동합니다 :)")
+        location.href ="game2.html";
     }   
     
 }
