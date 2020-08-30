@@ -12,7 +12,7 @@ const timer = () => {
     else {
         clearInterval(setTime);
         alert("시간 초과!! 다음 문제로 이동합니다 :)")
-        location.href ="game2.html";
+       // location.href ="game2.html";
     }   
     
 }
