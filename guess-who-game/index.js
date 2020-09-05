@@ -7,8 +7,8 @@ const btnHome = document.querySelector(".btn-home"),
 
 const scoreView = document.querySelector(".score");
 const totalScoreView = document.querySelector(".totalScore"); 
-const STAGE_LS = "1",
-SCORE_LS = "MY SCORE";
+const STAGE_LS = "1";
+const SCORE_LS = "MY SCORE";
 
 //save.. :stage 점수를 localStorage에 저장
 const saveStageScore = (score) => {
