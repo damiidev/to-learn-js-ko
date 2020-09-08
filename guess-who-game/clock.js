@@ -1,8 +1,8 @@
-const clockContainter = document.querySelector(".clock-container");
-const clockText = clockContainter.querySelector("h3");
+const clockContainter = document.querySelector(".clock-container"),
+clockText = clockContainter.querySelector("h3");
 
-let startTime = 30;
-let realScore = 10;
+let startTime = 30,
+realScore = 10;
 
 const timer = () => {
     if (startTime > 0){
@@ -13,9 +13,6 @@ const timer = () => {
         clearInterval(setTime);
         alert("시간 초과!! 다음 문제로 이동합니다 :)")
        // location.href ="game2.html";
-    }   
-    
+    }      
 }
-
-
 const setTime = setInterval(timer,1000); 
